@@ -51,7 +51,13 @@ const Project = ({
             </a>
           </Link>
         </Button>
-        <Button>
+        <Button
+          bgColor="patrickBlue"
+          color="whiteCoffee"
+          _hover={{ opacity: "1" }}
+          border="1px solid"
+          borderColor="whiteCoffee"
+        >
           <Link href={live} passHref>
             <a target="_blank" rel="noopener noreferrer">
               Go To
