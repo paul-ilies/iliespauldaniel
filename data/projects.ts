@@ -20,5 +20,6 @@ export const projects = [
     description: "Project built with Nextjs and Chakra UI",
     github: "https://github.com/paul-ilies/shine-your-project",
     live: "https://www.shineyourproject.com/",
+    currentProject: true,
   },
 ];

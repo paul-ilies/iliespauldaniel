@@ -45,6 +45,7 @@ const Portfolio = () => {
               description={description}
               github={github}
               live={live}
+              currentProject={project?.currentProject}
             />
           );
         })}

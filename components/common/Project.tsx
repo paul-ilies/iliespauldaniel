@@ -6,11 +6,13 @@ const Project = ({
   description,
   github,
   live,
+  currentProject,
 }: {
   title: string;
   description: string;
   github: string;
   live: string;
+  currentProject?: boolean;
 }) => {
   return (
     <Flex
@@ -57,6 +59,7 @@ const Project = ({
           _hover={{ opacity: "1" }}
           border="1px solid"
           borderColor="whiteCoffee"
+          display={currentProject ? "none" : "visible"}
         >
           <Link href={live} passHref>
             <a target="_blank" rel="noopener noreferrer">
