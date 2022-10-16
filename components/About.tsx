@@ -7,7 +7,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 const content = {
   heading: "About me",
   description:
-    "Front-end developer with 2+ years of experience in web-development specialized in React and Node.js. I graduted the postgraduate program in Applied Informatics and Programming at Technical University of Cluj-Napoca in 2021. I learned the basics of programming in C++, relational databases with Oracle SQL, web technologies as HTML, CSS, Javascript, programming in C#, the bases of computer systems and networks, OOP programming concepts and fundamental algoritms.",
+    "Front-end developer with 2+ years of experience in web-development specialized in React and Node.js. I graduated the postgraduate program in Applied Informatics and Programming at Technical University of Cluj-Napoca in 2021. I learned the basics of programming in C++, relational databases with Oracle SQL, web technologies as HTML, CSS, Javascript, programming in C#, the bases of computer systems and networks, OOP programming concepts and fundamental algoritms.",
 };
 
 const About = () => {
