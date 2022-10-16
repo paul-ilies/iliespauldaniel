@@ -18,7 +18,7 @@ export const projects = [
     id: 3,
     title: "Personal Portfolio",
     description: "Project built with Nextjs and Chakra UI",
-    github: "https://github.com/paul-ilies/shine-your-project",
+    github: "https://github.com/paul-ilies/iliespauldaniel",
     live: "https://www.shineyourproject.com/",
     currentProject: true,
   },
