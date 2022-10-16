@@ -19,20 +19,20 @@ class MyDocument extends NextDocument {
             rel="stylesheet"
           />
           <Script
+            strategy="lazyOnload"
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}"`}
           ></Script>
-          <Script
-            id="google analytic"
-            dangerouslySetInnerHTML={{
-              __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config','${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}')
-          `,
-            }}
-          />
+          <Script strategy="lazyOnload" id="analytic">
+            {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+          </Script>{" "}
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
