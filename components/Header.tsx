@@ -3,8 +3,8 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import Logo from "./common/Logo";
 
 const links = [
-  { name: "About", href: "#about" },
-  { name: "Portfolio", href: "#portfolio" },
+  { name: "About", href: "/#about" },
+  { name: "Portfolio", href: "/#portfolio" },
 ];
 
 const Header = ({ navHeight }: any) => {

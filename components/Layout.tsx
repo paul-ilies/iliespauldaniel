@@ -13,6 +13,8 @@ const Layout = ({ children, navHeight }: Props) => {
     <Box
       m={{ base: "0 0.5rem", sm: "0 2rem", md: "0 5rem", lg: "0 10rem" }}
       minH="100vh"
+      display="flex"
+      flexDirection="column"
     >
       <Header navHeight={navHeight} />
       {children}

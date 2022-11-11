@@ -4,7 +4,7 @@ import SocialLinks from "./common/SocialLinks";
 
 const Footer = () => {
   return (
-    <Box py="2rem" mt="auto">
+    <Box py="2rem">
       <Flex
         alignItems="center"
         justifyContent="center"
