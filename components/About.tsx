@@ -7,7 +7,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 const content = {
   heading: "About me",
   description:
-    "Frontend developer specialized in JavaScript with React ecosystem. I graduated the postgraduate program in Applied Informatics and Programming at Technical University of Cluj-Napoca in 2021. I learned the basics of programming in C++, relational databases with Oracle SQL, web technologies as HTML, CSS, Javascript, programming in C#, the bases of computer systems and networks, OOP programming concepts and fundamental algoritms.",
+    "I am a front-end developer with a strong foundation in JavaScript and experience using various front-end frameworks, including React and NextJS. I have also used GraphQL for data management and Chakra UI for styling and design.I am a recent graduate of the postgraduate program in Applied Informatics and Programming at Technical University of Cluj-Napoca, where I learned the basics of programming in C++, relational databases with Oracle SQL, and web technologies such as HTML, CSS, and JavaScript. I also gained an understanding of computer systems and networks, object-oriented programming concepts, and fundamental algorithms. I am passionate about creating intuitive and engaging user experiences and am always looking for new opportunities to grow and learn as a developer.",
 };
 
 const About = () => {
