@@ -1,4 +1,4 @@
-import { useRef, useState, useLayoutEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import ResizeObserver from "resize-observer-polyfill";
 
 const initialState = { width: 0, height: 0 };
@@ -6,7 +6,7 @@ const useDimension = (ref: any) => {
   const [dimensions, setdDimensions] = useState(initialState);
   const resizeObserverRef = useRef<any>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     resizeObserverRef.current = new ResizeObserver((entries = []) => {
       entries.forEach((entry) => {
         const { width, height } = entry.contentRect;
