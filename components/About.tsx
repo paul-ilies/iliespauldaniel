@@ -2,21 +2,18 @@ import { Box, Heading, Flex, Text } from "@chakra-ui/react";
 import Headline from "./common/Headline";
 import Parallax from "./common/Parallax";
 import Image from "next/image";
-import useMediaQuery from "../hooks/useMediaQuery";
 
 const content = {
   heading: "About me",
   description:
-    "I am a front-end developer with a strong foundation in JavaScript and experience using various front-end frameworks, including React and NextJS. I have also used GraphQL for data management and Chakra UI for styling and design.I am a recent graduate of the postgraduate program in Applied Informatics and Programming at Technical University of Cluj-Napoca, where I learned the basics of programming in C++, relational databases with Oracle SQL, and web technologies such as HTML, CSS, and JavaScript. I also gained an understanding of computer systems and networks, object-oriented programming concepts, and fundamental algorithms. I am passionate about creating intuitive and engaging user experiences and am always looking for new opportunities to grow and learn as a developer.",
+    "I am a front-end developer with a strong foundation in JavaScript specialized in React with NextJS framework.I graduated the postgraduate program in Applied Informatics and Programming at Technical University of Cluj-Napoca, where I learned the basics of programming in C++, relational databases with Oracle SQL, and web technologies such as HTML, CSS, and JavaScript. I also gained an understanding of computer systems and networks, object-oriented programming concepts, and fundamental algorithms. I am passionate about creating intuitive and engaging user experiences and am always looking for new opportunities to grow and learn as a developer.",
 };
 
 const About = () => {
-  const isMobile = useMediaQuery("(max-width: 600px)");
-
   return (
     <Box mb="5rem" id="about">
       <Flex
-        justifyContent={isMobile ? "center" : "flex-start"}
+        justifyContent={{ base: "center", md: "flex-start" }}
         my={{ base: 4, md: 12 }}
       >
         <Heading
@@ -27,10 +24,9 @@ const About = () => {
           _after={{
             content: "''",
             position: "absolute",
-            bottom: isMobile ? "-4" : "4",
-            display: isMobile ? "block" : "inline-block",
+            bottom: { base: "0", md: "-10px" },
+            display: { base: "block", md: "inline-block" },
             border: "0.5px #EAE3D2 solid",
-            ml: isMobile ? 0 : 4,
             w: "100%",
           }}
         >
@@ -76,6 +72,8 @@ const About = () => {
             fontWeight="300"
             fontSize="2xl"
             textAlign="left"
+            textColor="#D4D4D4"
+            opacity={0.9}
           >
             {content.description}
           </Text>

@@ -1,16 +1,12 @@
-import { Box, Center, Flex, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Text, calc } from "@chakra-ui/react";
 import SocialLinks from "./common/SocialLinks";
 
-interface Props {
-  navHeight?: number;
-  containerMarginTop?: string;
-}
-const Hero = ({ navHeight, containerMarginTop }: Props) => {
+const Hero = () => {
   return (
     <Flex
-      h={`calc(100vh - ${containerMarginTop} - ${navHeight}px)`}
       position="relative"
       flexDirection="column"
+      height={{ base: `calc(100vh - 72px)`, md: `calc(100vh - 144px)` }}
     >
       <Center flexDirection="column" h="100%" width="100%">
         <Box>
@@ -29,8 +25,7 @@ const Hero = ({ navHeight, containerMarginTop }: Props) => {
         </Box>
         <Box>
           <Text fontSize="2xl" fontWeight="300" textAlign="center">
-            Software Engineer - Javascript developer specialized in React and
-            Node.js
+            JavaScript Enginner with 3+ years of experience specialized in React
           </Text>
         </Box>
         <Flex

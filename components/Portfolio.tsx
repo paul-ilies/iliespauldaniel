@@ -1,15 +1,12 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import { projects } from "../data/projects";
-import useMediaQuery from "../hooks/useMediaQuery";
 import Project from "./common/Project";
 
 const Portfolio = () => {
-  const isMobile = useMediaQuery("(max-width: 600px)");
-
   return (
     <Box mb="5rem" id="portfolio">
       <Flex
-        justifyContent={isMobile ? "center" : "flex-start"}
+        justifyContent={{ base: "center", md: "flex-start" }}
         my={{ base: 4, md: 12 }}
       >
         <Heading
@@ -20,10 +17,9 @@ const Portfolio = () => {
           _after={{
             content: "''",
             position: "absolute",
-            bottom: isMobile ? "-4" : "4",
-            display: isMobile ? "block" : "inline-block",
+            bottom: { base: "0", md: "-10px" },
+            display: { base: "block", md: "inline-block" },
             border: "0.5px #EAE3D2 solid",
-            ml: isMobile ? 0 : 4,
             w: "100%",
           }}
         >

@@ -32,12 +32,7 @@ const Project = ({
         >
           {title}
         </Heading>
-        <Text
-          lineHeight="1.32"
-          fontWeight="300"
-          fontSize="2xl"
-          textAlign="center"
-        >
+        <Text lineHeight="1.32" fontWeight="300" fontSize="2xl">
           {description}
         </Text>
       </Flex>

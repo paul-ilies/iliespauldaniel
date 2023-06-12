@@ -1,5 +1,4 @@
 import { Flex, Link, ListItem, UnorderedList } from "@chakra-ui/react";
-import useMediaQuery from "../hooks/useMediaQuery";
 import Logo from "./common/Logo";
 
 const links = [
@@ -7,26 +6,15 @@ const links = [
   { name: "Portfolio", href: "/#portfolio" },
 ];
 
-const Header = ({ navHeight }: any) => {
-  const isMobile = useMediaQuery("(max-width: 600px)");
-
+const Header = () => {
   return (
     <Flex
-      display="flex"
-      width="100%"
-      alignItems="center"
       pt="1rem"
-      ref={navHeight}
-      flexDir={isMobile ? "column" : "row"}
-      gap={isMobile ? "1rem" : "0"}
+      gap={{ base: "1rem", md: "0" }}
+      justifyContent="space-between"
     >
       <Logo />
-      <UnorderedList
-        listStyleType="none"
-        display="flex"
-        ml={isMobile ? "0" : "auto"}
-        gap="2rem"
-      >
+      <UnorderedList listStyleType="none" display="flex" gap="2rem">
         {links.map((el, i) => {
           return (
             <ListItem
