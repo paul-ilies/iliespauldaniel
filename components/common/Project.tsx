@@ -27,7 +27,7 @@ const Project = ({
         <Heading
           as="h2"
           textAlign="center"
-          fontSize={{ base: "4xl", md: "6xl" }}
+          // fontSize={{ base: "4xl", md: "6xl" }}
           color=" oldLace"
         >
           {title}
